@@ -49,14 +49,14 @@ public class Master {
 
         // Lanzar Fusioner
         List<String> argsFusioner = new ArrayList<>();
-        argsFusioner.add("java");
-        argsFusioner.add("-cp");
-        argsFusioner.add(System.getProperty("java.class.path"));
-        argsFusioner.add("Practicas.Practica2.Fusioner");
-        argsFusioner.addAll(archivosTemp);
-        //argsFusioner.add("python");
-        //argsFusioner.add("C:\\Users\\pablo.barreiroiglesi\\IdeaProjects\\ud1_practicas_Lledo_Enmanuel_Barreiro_Pablo\\untitled\\PythonFusioner\\Fusioner.py");
+        //argsFusioner.add("java");
+        //argsFusioner.add("-cp");
+        //argsFusioner.add(System.getProperty("java.class.path"));
+        //argsFusioner.add("Practicas.Practica2.Fusioner");
         //argsFusioner.addAll(archivosTemp);
+        argsFusioner.add("python");
+        argsFusioner.add("Python/PythonFusioner/Fusioner.py");
+        argsFusioner.addAll(archivosTemp);
 
         try {
             Process fusioner = new ProcessBuilder(argsFusioner).inheritIO().start();

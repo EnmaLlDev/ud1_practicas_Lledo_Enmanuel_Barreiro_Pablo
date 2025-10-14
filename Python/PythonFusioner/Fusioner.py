@@ -3,17 +3,16 @@ import os
 class Fusioner:
     @staticmethod
     def main(args):
-        total_freq = dict(int)
+        total_freq = {}
         for archivo in args:
             try:
                 with open(archivo) as a:
                     for linea in a:
-                        partes = partes.split[","]
+                        partes = linea.strip().split(",")
                         if len(partes)==2:
                             palabra = partes[0]
                             frecuencia = int(partes[1])
-                            total_freq[palabra] += frecuencia
-                        pass
+                            total_freq[palabra] = total_freq.get(palabra, 0) + frecuencia
             except IOError:
                 print("Error de lectura")
 
@@ -28,6 +27,10 @@ class Fusioner:
                 os.remove(archivo)
             except OSError:
                 print("El archivo no existe.")
-    
 
-            
+if __name__ == "__main__":
+    import sys
+    Fusioner.main(sys.argv[1:])
+
+
+
