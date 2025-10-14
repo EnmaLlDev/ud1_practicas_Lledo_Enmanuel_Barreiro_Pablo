@@ -35,7 +35,7 @@ public class Master {
 
             ProcessBuilder pb = new ProcessBuilder(
                     "java", "-cp", System.getProperty("java.class.path"),
-                    "edu.ellpb.psp.Practicas.Practica2.Worker",
+                    "Practicas.Practica2.Worker",
                     ruta, String.valueOf(inicio), String.valueOf(fin), temp
             );
             try {
@@ -52,7 +52,7 @@ public class Master {
         argsFusioner.add("java");
         argsFusioner.add("-cp");
         argsFusioner.add(System.getProperty("java.class.path"));
-        argsFusioner.add("edu.ellpb.psp.Practicas.Practica2.Fusioner");
+        argsFusioner.add("Practicas.Practica2.Fusioner");
         argsFusioner.addAll(archivosTemp);
         //argsFusioner.add("python");
         //argsFusioner.add("C:\\Users\\pablo.barreiroiglesi\\IdeaProjects\\ud1_practicas_Lledo_Enmanuel_Barreiro_Pablo\\untitled\\PythonFusioner\\Fusioner.py");
