@@ -54,6 +54,9 @@ public class Master {
         argsFusioner.add(System.getProperty("java.class.path"));
         argsFusioner.add("edu.ellpb.psp.Practicas.Practica2.Fusioner");
         argsFusioner.addAll(archivosTemp);
+        //argsFusioner.add("python");
+        //argsFusioner.add("C:\\Users\\pablo.barreiroiglesi\\IdeaProjects\\ud1_practicas_Lledo_Enmanuel_Barreiro_Pablo\\untitled\\PythonFusioner\\Fusioner.py");
+        //argsFusioner.addAll(archivosTemp);
 
         try {
             Process fusioner = new ProcessBuilder(argsFusioner).inheritIO().start();
